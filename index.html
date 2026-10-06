@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sisi Travel — Since 1982 · سيسي ترافل</title>
+<meta name="description" content="Sisi Travel Egypt — four decades of world-class travel from Egypt to the world. Umrah & Hajj, global destinations, tailored journeys. East Hub, Madinaty · New Cairo.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0b0a08;
+  --ink:#14120e;
+  --ink2:#1c1913;
+  --gold:#d4af8c;
+  --gold-bright:#e8c9a0;
+  --gold-dim:#8a7157;
+  --paper:#f5efe4;
+  --muted:#a99e8c;
+  --line:rgba(212,175,140,.22);
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Jost',sans-serif;
+  --arabic:'Amiri',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--paper);font-family:var(--sans);font-weight:300;overflow-x:hidden;line-height:1.6}
+::selection{background:var(--gold);color:var(--black)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ---------- grain + vignette atmosphere ---------- */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- preloader ---------- */
+#loader{position:fixed;inset:0;background:var(--black);z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;transition:opacity .9s ease,visibility .9s}
+#loader.done{opacity:0;visibility:hidden}
+#loader .cart{width:74px;height:74px}
+#loader .cart svg{width:100%;height:100%;animation:glowpulse 2.2s ease-in-out infinite}
+@keyframes glowpulse{0%,100%{opacity:.55;transform:scale(.97)}50%{opacity:1;transform:scale(1)}}
+#loader .word{font-family:var(--serif);letter-spacing:.55em;text-indent:.55em;font-size:.85rem;color:var(--gold);text-transform:uppercase}
+#loader .bar{width:120px;height:1px;background:rgba(212,175,140,.18);overflow:hidden}
+#loader .bar i{display:block;height:100%;width:40%;background:var(--gold);animation:loadslide 1.1s ease-in-out infinite}
+@keyframes loadslide{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+/* ---------- navigation ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 4rem;transition:all .5s ease}
+nav.scrolled{background:rgba(11,10,8,.88);backdrop-filter:blur(14px);padding:.9rem 4rem;border-bottom:1px solid var(--line)}
+nav .brand{display:flex;align-items:center;gap:.9rem}
+nav .brand img{height:52px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.6))}
+nav .brand .t{font-family:var(--serif);font-size:1.25rem;letter-spacing:.28em;color:var(--paper)}
+nav .brand .t small{display:block;font-family:var(--arabic);font-size:.72rem;letter-spacing:.1em;color:var(--gold);text-align:center}
+nav ul{display:flex;gap:2.6rem;list-style:none}
+nav ul a{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);position:relative;padding:.3rem 0;transition:color .3s}
+nav ul a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .4s ease}
+nav ul a:hover{color:var(--gold-bright)}
+nav ul a:hover::after{width:100%}
+nav .cta{border:1px solid var(--gold);color:var(--gold-bright);padding:.65rem 1.7rem;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;transition:all .35s}
+nav .cta:hover{background:var(--gold);color:var(--black)}
+.burger{display:none;flex-direction:column;gap:6px;cursor:pointer;z-index:9002}
+.burger span{width:26px;height:1.5px;background:var(--gold);transition:.4s}
+.burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100svh;min-height:640px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url('assets/hero-karnak.jpg') center/cover no-repeat;animation:herozoom 22s ease-out forwards;transform:scale(1.12)}
+@keyframes herozoom{to{transform:scale(1)}}
+.hero .veil{position:absolute;inset:0;background:
+  radial-gradient(ellipse at 50% 42%,rgba(11,10,8,.30) 0%,rgba(11,10,8,.62) 55%,rgba(11,10,8,.92) 100%),
+  linear-gradient(rgba(11,10,8,.35),rgba(11,10,8,.55));}
+.hero .content{position:relative;z-index:2;padding:0 2rem;max-width:1000px}
+.hero .eyebrow{font-size:.8rem;letter-spacing:.6em;text-indent:.6em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:1.4rem;opacity:0;animation:fadeUp 1.2s .3s ease forwards}
+.hero .eyebrow::before,.hero .eyebrow::after{content:'';width:52px;height:1px;background:var(--line)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(3rem,8.5vw,7rem);line-height:1.04;letter-spacing:.02em;opacity:0;animation:fadeUp 1.4s .55s ease forwards}
+.hero h1 em{font-style:italic;color:var(--gold-bright)}
+.hero .ar{font-family:var(--arabic);font-size:clamp(1.3rem,2.6vw,2rem);color:var(--gold);margin-top:1.6rem;opacity:0;animation:fadeUp 1.4s .8s ease forwards}
+.hero .sub{margin-top:2.2rem;font-size:clamp(.95rem,1.4vw,1.08rem);color:rgba(245,239,228,.82);max-width:620px;margin-left:auto;margin-right:auto;opacity:0;animation:fadeUp 1.4s 1s ease forwards}
+.hero .actions{margin-top:3rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp 1.4s 1.2s ease forwards}
+.btn{display:inline-block;padding:1rem 2.6rem;font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;transition:all .4s cubic-bezier(.2,.8,.2,1);position:relative}
+.btn.gold{background:var(--gold);color:var(--black)}
+.btn.gold:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 14px 40px rgba(212,175,140,.25)}
+.btn.ghost{border:1px solid rgba(245,239,228,.4);color:var(--paper)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
+.hero .scroll{position:absolute;bottom:2.4rem;left:50%;transform:translateX(-50%);z-index:2;font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:.8rem;opacity:0;animation:fadeUp 1.2s 1.8s ease forwards}
+.hero .scroll::after{content:'';width:1px;height:52px;background:linear-gradient(var(--gold),transparent);animation:scrolldrip 2s ease-in-out infinite}
+@keyframes scrolldrip{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---------- marquee ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink);overflow:hidden;padding:1.1rem 0;white-space:nowrap}
+.marquee .track{display:inline-block;animation:marq 36s linear infinite}
+.marquee span{font-family:var(--serif);font-size:1rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-dim);margin:0 2.6rem}
+.marquee i{color:var(--gold);font-style:normal}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- shared section chrome ---------- */
+section{position:relative}
+.wrap{max-width:1280px;margin:0 auto;padding:0 4rem}
+.sec-head{margin-bottom:4.5rem}
+.sec-head .kicker{font-size:.75rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1.2rem;margin-bottom:1.4rem}
+.sec-head .kicker::before{content:'';width:44px;height:1px;background:var(--gold-dim)}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.12}
+.sec-head h2 em{font-style:italic;color:var(--gold-bright)}
+.sec-head p.lead{margin-top:1.4rem;color:var(--muted);max-width:640px;font-size:1.02rem}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- legacy / about ---------- */
+.legacy{padding:9rem 0;background:linear-gradient(var(--black),var(--ink) 55%,var(--black))}
+.legacy .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:5rem;align-items:center}
+.legacy .frames{position:relative;height:640px}
+.legacy .frames .f{position:absolute;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.legacy .frames .f img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.legacy .frames .f:hover img{transform:scale(1.06)}
+.legacy .frames .f1{width:58%;height:66%;top:0;left:0;z-index:1}
+.legacy .frames .f2{width:52%;height:56%;bottom:0;right:0;z-index:2;border-color:rgba(212,175,140,.4)}
+.legacy .frames .badge{position:absolute;top:42%;left:34%;z-index:3;width:150px;height:150px;background:var(--black);border:1px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;transform:rotate(45deg)}
+.legacy .frames .badge .in{transform:rotate(-45deg);text-align:center}
+.legacy .frames .badge .yr{font-family:var(--serif);font-size:2rem;color:var(--gold-bright);line-height:1}
+.legacy .frames .badge .lb{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+.legacy .story p{color:rgba(245,239,228,.78);margin-bottom:1.4rem;font-size:1.04rem}
+.legacy .story p:first-of-type::first-letter{font-family:var(--serif);font-size:3.6em;float:left;line-height:.82;padding-right:.12em;color:var(--gold-bright)}
+.legacy .values{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:2.6rem;border-top:1px solid var(--line)}
+.legacy .values div{padding:1.3rem .2rem;border-bottom:1px solid var(--line);display:flex;gap:1rem;align-items:baseline}
+.legacy .values b{font-family:var(--serif);font-weight:600;color:var(--gold-bright);font-size:1.05rem;letter-spacing:.04em;white-space:nowrap}
+.legacy .values span{color:var(--muted);font-size:.86rem}
+
+/* ---------- services ---------- */
+.services{padding:8rem 0 9rem;background:var(--black)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.svc{position:relative;border:1px solid var(--line);padding:3rem 2.4rem 2.6rem;background:linear-gradient(160deg,var(--ink2),var(--ink));overflow:hidden;transition:all .5s cubic-bezier(.2,.8,.2,1)}
+.svc:hover{border-color:rgba(212,175,140,.55);transform:translateY(-6px);box-shadow:0 26px 60px rgba(0,0,0,.5)}
+.svc::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .6s ease}
+.svc:hover::before{transform:scaleX(1)}
+.svc .num{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--gold-dim);letter-spacing:.2em}
+.svc h3{font-family:var(--serif);font-weight:600;font-size:1.55rem;margin:.9rem 0 .8rem;color:var(--paper)}
+.svc p{color:var(--muted);font-size:.92rem;min-height:66px}
+.svc .ar{font-family:var(--arabic);color:var(--gold);opacity:.5;font-size:1.05rem;margin-top:1.4rem;transition:opacity .4s}
+.svc:hover .ar{opacity:1}
+.svc.feature{background:linear-gradient(160deg,#241d12,var(--ink));border-color:rgba(212,175,140,.5)}
+
+/* ---------- destinations ---------- */
+.dest{padding:8rem 0 9rem;background:linear-gradient(var(--black),var(--ink) 40%,var(--black))}
+.dest-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:210px;gap:1.1rem}
+.dcard{position:relative;overflow:hidden;cursor:pointer;border:1px solid var(--line)}
+.dcard img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.8,.2,1);filter:saturate(.92)}
+.dcard:hover img{transform:scale(1.09)}
+.dcard .shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(8,7,5,.9));transition:opacity .5s}
+.dcard .lab{position:absolute;left:1.6rem;bottom:1.3rem;z-index:2}
+.dcard .lab h3{font-family:var(--serif);font-weight:500;font-size:1.7rem;letter-spacing:.02em}
+.dcard .lab p{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:.2rem}
+.dcard .lab .a{font-family:var(--arabic);color:rgba(245,239,228,.55);font-size:.95rem}
+.d1{grid-column:span 5;grid-row:span 2}
+.d2{grid-column:span 4;grid-row:span 1}
+.d3{grid-column:span 3;grid-row:span 1}
+.d4{grid-column:span 3;grid-row:span 1}
+.d5{grid-column:span 4;grid-row:span 1}
+.d6{grid-column:span 4;grid-row:span 1}
+.d7{grid-column:span 3;grid-row:span 1}
+.d8{grid-column:span 5;grid-row:span 1}
+
+/* ---------- umrah banner ---------- */
+.umrah{position:relative;padding:10rem 0;text-align:center;overflow:hidden}
+.umrah .bg{position:absolute;inset:0;background:url('assets/kaaba.jpg') center/cover fixed no-repeat}
+.umrah .veil{position:absolute;inset:0;background:rgba(8,7,5,.72)}
+.umrah .content{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:0 2rem}
+.umrah .ar{font-family:var(--arabic);font-size:clamp(1.6rem,3vw,2.4rem);color:var(--gold-bright)}
+.umrah h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,5vw,4.2rem);margin:1.2rem 0 1.4rem}
+.umrah p{color:rgba(245,239,228,.8);margin-bottom:2.6rem}
+
+/* ---------- stats ---------- */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink)}
+.stats .row{display:grid;grid-template-columns:repeat(4,1fr)}
+.stats .cell{padding:3.6rem 2rem;text-align:center;border-left:1px solid var(--line)}
+.stats .cell:first-child{border-left:none}
+.stats .n{font-family:var(--serif);font-size:clamp(2.6rem,4.6vw,4rem);color:var(--gold-bright);line-height:1}
+.stats .l{margin-top:.7rem;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- gallery strip ---------- */
+.gallery{padding:8rem 0;background:var(--black)}
+.gal-track{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.gal-track .g{position:relative;overflow:hidden;height:420px;border:1px solid var(--line)}
+.gal-track .g:nth-child(2){height:480px;margin-top:3rem}
+.gal-track .g:nth-child(4){height:480px;margin-top:3rem}
+.gal-track .g img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s ease;filter:saturate(.9)}
+.gal-track .g:hover img{transform:scale(1.08)}
+.gal-track .g .cap{position:absolute;inset:auto 0 0 0;padding:1.4rem;background:linear-gradient(transparent,rgba(8,7,5,.92));font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- contact ---------- */
+.contact{padding:8rem 0 9rem;background:linear-gradient(var(--black),var(--ink) 60%,var(--black))}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start}
+.contact .info h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,4vw,3.4rem);margin-bottom:1.6rem}
+.contact .info>p{color:var(--muted);margin-bottom:2.6rem;max-width:480px}
+.c-item{display:flex;gap:1.4rem;padding:1.5rem 0;border-top:1px solid var(--line)}
+.c-item .ic{width:44px;height:44px;flex:none;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.05rem}
+.c-item b{display:block;font-weight:500;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
+.c-item p,.c-item a{color:rgba(245,239,228,.82);font-size:.98rem;line-height:1.55}
+.c-item a:hover{color:var(--gold-bright)}
+.branches{margin-top:.4rem}
+.branches li{list-style:none;color:rgba(245,239,228,.82);font-size:.92rem;padding:.28rem 0}
+.branches li::before{content:'◆';color:var(--gold);font-size:.6rem;margin-right:.7rem;vertical-align:1px}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.field{position:relative;margin-bottom:1.2rem}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-weight:300;font-size:.98rem;padding:.95rem .1rem;outline:none;transition:border .35s;border-radius:0}
+.field select{appearance:none;color:var(--muted)}
+.field select option{background:var(--ink);color:var(--paper)}
+.field textarea{resize:vertical;min-height:110px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field label{position:absolute;left:.1rem;top:.95rem;color:var(--muted);font-size:.95rem;pointer-events:none;transition:.3s}
+.field input:focus~label,.field input:valid~label,.field.filled label{top:-.75rem;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.field select:focus~label,.field select:valid~label,.field textarea:focus~label,.field textarea:valid~label{top:-.75rem;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+form .btn{width:100%;margin-top:1rem;cursor:pointer;border:none;font-family:var(--sans)}
+.form-note{margin-top:1rem;font-size:.8rem;color:var(--muted);display:none}
+.form-note.show{display:block}
+
+/* ---------- footer ---------- */
+footer{background:#080705;border-top:1px solid var(--line);padding:4.5rem 0 2.4rem}
+footer .top{display:flex;justify-content:space-between;align-items:center;gap:3rem;flex-wrap:wrap;margin-bottom:3rem}
+footer .fbrand{display:flex;align-items:center;gap:1.2rem}
+footer .fbrand img{height:64px}
+footer .fbrand .n{font-family:var(--serif);letter-spacing:.3em;font-size:1.15rem}
+footer .fbrand .a{font-family:var(--arabic);color:var(--gold);font-size:.85rem}
+footer .fnote{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold-bright)}
+footer .bottom{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;border-top:1px solid rgba(212,175,140,.12);padding-top:1.8rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#6d6355}
+footer .bottom a:hover{color:var(--gold)}
+
+/* ---------- responsive ---------- */
+@media(max-width:1080px){
+  nav{padding:1.2rem 2rem}nav.scrolled{padding:.8rem 2rem}
+  .wrap{padding:0 2rem}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .legacy .grid,.contact .grid{grid-template-columns:1fr;gap:3.5rem}
+  .legacy .frames{height:520px}
+}
+@media(max-width:760px){
+  nav ul,nav .cta{display:none}
+  .burger{display:flex}
+  nav.menu-open ul{display:flex;position:fixed;inset:0;background:rgba(8,7,5,.97);flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;font-size:1.1rem}
+  .svc-grid{grid-template-columns:1fr}
+  .dest-grid{grid-template-columns:repeat(6,1fr);grid-auto-rows:170px}
+  .d1{grid-column:span 6;grid-row:span 2}.d2,.d3,.d4,.d5,.d6,.d7,.d8{grid-column:span 3}
+  .stats .row{grid-template-columns:repeat(2,1fr)}
+  .stats .cell:nth-child(3){border-left:none}
+  .stats .cell{border-top:1px solid var(--line)}
+  .stats .cell:nth-child(-n+2){border-top:none}
+  .gal-track{grid-template-columns:repeat(2,1fr)}
+  .gal-track .g{height:300px}.gal-track .g:nth-child(2),.gal-track .g:nth-child(4){height:340px;margin-top:2rem}
+  form .row{grid-template-columns:1fr}
+  .legacy .frames{height:420px}
+  .legacy .frames .badge{width:110px;height:110px;top:40%;left:33%}
+  .hero .actions .btn{padding:.9rem 1.8rem}
+}
+</style>
+</head>
+<body>
+
+<!-- preloader -->
+<div id="loader">
+  <div class="cart">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="84" height="84" rx="16" stroke="#d4af8c" stroke-width="3"/>
+      <rect x="16" y="16" width="68" height="68" rx="10" stroke="#d4af8c" stroke-width="1.2" opacity=".6"/>
+      <path d="M28 36c3-3 7-3 10 0 3 3 7 3 10 0" stroke="#e8c9a0" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M28 44c3-3 7-3 10 0 3 3 7 3 10 0" stroke="#e8c9a0" stroke-width="2.4" stroke-linecap="round"/>
+      <ellipse cx="66" cy="40" rx="9" ry="5.5" fill="#d4af8c"/>
+      <path d="M33 72l6-14 6 14c-4 2.4-8 2.4-12 0z" fill="#d4af8c"/>
+      <path d="M60 72c0-8 5-12 11-12-1 7-4 11-11 12z" fill="#d4af8c"/>
+    </svg>
+  </div>
+  <div class="word">Sisi Travel</div>
+  <div class="bar"><i></i></div>
+</div>
+
+<!-- nav -->
+<nav id="nav">
+  <a class="brand" href="#top">
+    <img src="assets/logo-wide.png" alt="Sisi Travel">
+  </a>
+  <ul>
+    <li><a href="#legacy">Our Story</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#umrah">Hajj &amp; Umrah</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="cta" href="#contact">Plan Your Journey</a>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- hero -->
+<header class="hero" id="top">
+  <div class="bg"></div>
+  <div class="veil"></div>
+  <div class="content">
+    <div class="eyebrow">Est. 1982 · Egypt</div>
+    <h1>Every Journey<br>a <em>Story</em> Worth Telling</h1>
+    <div class="ar">سيسي ترافل — رفاق رحلتكم منذ ١٩٨٢</div>
+    <p class="sub">For over four decades, Sisi Travel has crafted seamless journeys from Egypt to the world — pilgrimages, escapes, and expeditions — with a personal touch that only a family legacy can give.</p>
+    <div class="actions">
+      <a class="btn gold" href="#destinations">Explore Destinations</a>
+      <a class="btn ghost" href="#services">Our Services</a>
+    </div>
+  </div>
+  <div class="scroll">Scroll</div>
+</header>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Hajj <i>◆</i></span><span>Umrah <i>◆</i></span><span>Luxury Nile Cruises <i>◆</i></span><span>Aviation <i>◆</i></span><span>Tailor-Made Journeys <i>◆</i></span><span>MICE Tourism <i>◆</i></span><span>Inbound &amp; Outbound <i>◆</i></span><span>Hospitality <i>◆</i></span>
+    <span>Hajj <i>◆</i></span><span>Umrah <i>◆</i></span><span>Luxury Nile Cruises <i>◆</i></span><span>Aviation <i>◆</i></span><span>Tailor-Made Journeys <i>◆</i></span><span>MICE Tourism <i>◆</i></span><span>Inbound &amp; Outbound <i>◆</i></span><span>Hospitality <i>◆</i></span>
+  </div>
+</div>
+
+<!-- legacy -->
+<section class="legacy" id="legacy">
+  <div class="wrap">
+    <div class="grid">
+      <div class="frames reveal">
+        <div class="f f1"><img src="assets/karnak.jpg" alt="Karnak Temple, Luxor" loading="lazy"></div>
+        <div class="f f2"><img src="assets/islamic-cairo.jpg" alt="Historic Cairo" loading="lazy"></div>
+        <div class="badge"><div class="in"><div class="yr">1982</div><div class="lb">Since</div></div></div>
+      </div>
+      <div class="story">
+        <div class="sec-head reveal" style="margin-bottom:2.2rem">
+          <div class="kicker">Our Legacy</div>
+          <h2>Four Decades,<br>One <em>Promise</em></h2>
+        </div>
+        <p class="reveal">Sisi Travel Egypt was founded in 1982 with a simple yet ambitious goal — to redefine travel in Egypt by providing world-class services with a personal touch. Over the past four decades, we've proudly served thousands of individual travelers, families, corporate clients, religious groups, and international partners.</p>
+        <p class="reveal">We are more than a travel agency — we are a team of passionate professionals who understand that every journey is a personal story. From the first call to the final farewell, we provide seamless coordination, creative itineraries, and unmatched hospitality.</p>
+        <div class="values reveal">
+          <div><b>Integrity</b><span>Honoring promises with transparency</span></div>
+          <div><b>Excellence</b><span>Continuously elevating standards</span></div>
+          <div><b>Innovation</b><span>Unique solutions, crafted creatively</span></div>
+          <div><b>Respect</b><span>Valuing clients, partners, heritage</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- services -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What We Do</div>
+      <h2>Services Crafted<br>Around <em>You</em></h2>
+      <p class="lead">Seven disciplines, one standard — every arrangement handled end-to-end by specialists who treat your trip as their own.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc feature reveal">
+        <div class="num">01 — Pilgrimage</div>
+        <h3>Hajj &amp; Umrah</h3>
+        <p>Meaningful spiritual journeys to the holy destinations — organized with decades of experience, care, and devotion to every detail of your ibadah.</p>
+        <div class="ar">الحج والعمرة</div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">02 — Tours</div>
+        <h3>Inbound &amp; Outbound Tourism</h3>
+        <p>Meticulously crafted tours inside Egypt and international packages to Europe, Asia, and the Middle East.</p>
+        <div class="ar">السياحة الداخلية والخارجية</div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">03 — Flights</div>
+        <h3>Aviation Excellence</h3>
+        <p>Access to all major airlines, competitive fares, seamless bookings, and charter services.</p>
+        <div class="ar">الطيران والحجوزات</div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">04 — Hotels</div>
+        <h3>Hospitality</h3>
+        <p>Exceptional rates and availability at top hotels and resorts worldwide.</p>
+        <div class="ar">الضيافة والفنادق</div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">05 — Bespoke</div>
+        <h3>Customized Travel Packages</h3>
+        <p>Personalized itineraries based on your interests, needs, and style.</p>
+        <div class="ar">برامج مخصصة</div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">06 — Corporate</div>
+        <h3>MICE Tourism</h3>
+        <p>Complete management for meetings, incentives, conferences, and exhibitions.</p>
+        <div class="ar">المؤتمرات والمعارض</div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">07 — Cruises</div>
+        <h3>Cruise Adventures</h3>
+        <p>Luxury Nile cruises and high-seas journeys combining adventure and culture.</p>
+        <div class="ar">الرحلات البحرية</div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">08 — Day Tours</div>
+        <h3>Captivating Excursions</h3>
+        <p>Day tours and short excursions highlighting Egypt's rich culture and landscapes.</p>
+        <div class="ar">الرحلات اليومية</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- destinations -->
+<section class="dest" id="destinations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Where We Take You</div>
+      <h2>From the Nile<br>to the <em>World</em></h2>
+      <p class="lead">Egypt's timeless wonders, the Gulf's spirit, Europe's romance, and Asia's shores — curated by people who have walked them.</p>
+    </div>
+    <div class="dest-grid">
+      <div class="dcard d1 reveal"><img src="assets/pyramids.jpg" alt="Pyramids of Giza" loading="lazy"><div class="shade"></div><div class="lab"><h3>Giza</h3><p>Egypt — The Last Wonder</p></div></div>
+      <div class="dcard d2 reveal"><img src="assets/kaaba.jpg" alt="Makkah" loading="lazy"><div class="shade"></div><div class="lab"><h3>Makkah &amp; Madinah</h3><p>Saudi Arabia — Hajj &amp; Umrah</p></div></div>
+      <div class="dcard d3 reveal"><img src="assets/paris.jpg" alt="Paris" loading="lazy"><div class="shade"></div><div class="lab"><h3>Paris</h3><p>Europe</p></div></div>
+      <div class="dcard d4 reveal"><img src="assets/riyadh.jpg" alt="Riyadh" loading="lazy"><div class="shade"></div><div class="lab"><h3>Riyadh</h3><p>Gulf Cityscapes</p></div></div>
+      <div class="dcard d5 reveal"><img src="assets/bali.jpg" alt="Southeast Asia" loading="lazy"><div class="shade"></div><div class="lab"><h3>Asian Shores</h3><p>Bali &amp; Beyond</p></div></div>
+      <div class="dcard d6 reveal"><img src="assets/beach.jpg" alt="Red Sea Riviera" loading="lazy"><div class="shade"></div><div class="lab"><h3>Red Sea Riviera</h3><p>Egypt's Turquoise Coast</p></div></div>
+      <div class="dcard d7 reveal"><img src="assets/qaitbay.jpg" alt="Alexandria" loading="lazy"><div class="shade"></div><div class="lab"><h3>Alexandria</h3><p>The Mediterranean Bride</p></div></div>
+      <div class="dcard d8 reveal"><img src="assets/taj-mahal.jpg" alt="Agra" loading="lazy"><div class="shade"></div><div class="lab"><h3>Agra</h3><p>Asia — Wonders of the World</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- umrah banner -->
+<section class="umrah" id="umrah">
+  <div class="bg"></div>
+  <div class="veil"></div>
+  <div class="content reveal">
+    <div class="ar">وَأَذِّن فِي النَّاسِ بِالْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَىٰ كُلِّ ضَامِرٍ يَأْتِينَ</div>
+    <h2>Your Journey of a<br><em style="color:var(--gold-bright);font-style:italic">Lifetime</em> Begins Here</h2>
+    <p>Decades of trusted pilgrimage experience — every ritual, every transfer, every moment handled with devotion so you can focus on what matters.</p>
+    <a class="btn gold" href="#contact">Reserve Your Place</a>
+  </div>
+</section>
+
+<!-- stats -->
+<section class="stats">
+  <div class="row">
+    <div class="cell reveal"><div class="n" data-count="40">0</div><div class="l">Years of Experience</div></div>
+    <div class="cell reveal"><div class="n" data-count="1000" data-suffix="+">0</div><div class="l">Happy Travelers</div></div>
+    <div class="cell reveal"><div class="n" data-count="50" data-suffix="+">0</div><div class="l">Destinations</div></div>
+    <div class="cell reveal"><div class="n" data-count="25" data-suffix="+">0</div><div class="l">Awards Won</div></div>
+  </div>
+</section>
+
+<!-- gallery -->
+<section class="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Moments</div>
+      <h2>Postcards From <em>Our Journeys</em></h2>
+    </div>
+    <div class="gal-track">
+      <div class="g reveal"><img src="assets/family.jpg" alt="Family by the sea" loading="lazy"><div class="cap">Seaside Escapes</div></div>
+      <div class="g reveal"><img src="assets/hero-obelisk.jpg" alt="Karnak obelisk" loading="lazy"><div class="cap">Luxor — Ancient Thebes</div></div>
+      <div class="g reveal"><img src="assets/ramses.jpg" alt="Ramses II" loading="lazy"><div class="cap">Egypt's Living History</div></div>
+      <div class="g reveal"><img src="assets/sphinx.jpg" alt="The Sphinx" loading="lazy"><div class="cap">Guardian of Giza</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="grid">
+      <div class="info reveal">
+        <h2>Begin Your <em style="color:var(--gold-bright)">Story</em></h2>
+        <p>Tell us where you dream of going — a travel designer will reach out within 24 hours to shape it with you.</p>
+        <div class="c-item">
+          <div class="ic">✆</div>
+          <div><b>Call / WhatsApp</b><a href="tel:+201150011400">+20 115 001 1400</a><br><a href="tel:+20237605570" style="font-size:.88rem;color:var(--muted)">+20 2 3760 5570</a></div>
+        </div>
+        <div class="c-item">
+          <div class="ic">✉</div>
+          <div><b>Email</b><a href="mailto:info@sisi-travel.com">info@sisi-travel.com</a></div>
+        </div>
+        <div class="c-item">
+          <div class="ic">⌖</div>
+          <div><b>Find Us</b>
+            <ul class="branches">
+              <li>East Hub Mall — Madinaty, New Cairo</li>
+              <li>161 Sudan Street — Mohandessin, Giza (HQ)</li>
+              <li>Diar Nima Mall — Hussein Salem Street</li>
+              <li>Bella Sol Resort — El Mamsha, Hurghada</li>
+              <li>Miami — Alexandria</li>
+              <li>Banha — Qalyubia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <form id="bookform" class="reveal" autocomplete="off">
+        <div class="row">
+          <div class="field"><input type="text" required><label>First Name</label></div>
+          <div class="field"><input type="text" required><label>Last Name</label></div>
+        </div>
+        <div class="row">
+          <div class="field"><input type="email" required><label>Email Address</label></div>
+          <div class="field"><input type="tel" required><label>Phone Number</label></div>
+        </div>
+        <div class="row">
+          <div class="field filled">
+            <select required>
+              <option value="" disabled selected></option>
+              <option>Hajj &amp; Umrah</option>
+              <option>Inbound &amp; Outbound Tourism</option>
+              <option>Flights &amp; Aviation</option>
+              <option>Hotels &amp; Hospitality</option>
+              <option>Customized Package</option>
+              <option>MICE / Corporate</option>
+              <option>Cruise</option>
+              <option>Day Excursion</option>
+            </select><label>Service</label>
+          </div>
+          <div class="field"><input type="date"><label id="dlab" style="position:absolute">Travel Date</label></div>
+        </div>
+        <div class="field"><textarea></textarea><label>Tell Us About Your Dream Trip</label></div>
+        <button class="btn gold" type="submit">Send Booking Request</button>
+        <div class="form-note" id="fnote">Thank you — your request has been received. A travel designer will contact you within 24 hours. (Demo form — connect to your booking system or email to go live.)</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div class="fbrand">
+        <img src="assets/logo-wide.png" alt="Sisi Travel">
+      </div>
+      <div class="fnote">"Every destination becomes a story worth telling."</div>
+    </div>
+    <div class="bottom">
+      <div>© 2026 Sisi Travel Egypt — Est. 1982</div>
+      <div>Hajj &amp; Umrah · Tourism · Aviation · Hospitality</div>
+      <div><a href="#top">Back to Top ↑</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// preloader
+window.addEventListener('load', () => setTimeout(() => document.getElementById('loader').classList.add('done'), 700));
+
+// nav scroll state
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+// mobile menu
+const burger = document.getElementById('burger');
+burger.addEventListener('click', () => { nav.classList.toggle('menu-open'); burger.classList.toggle('open'); });
+document.querySelectorAll('nav ul a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('menu-open'); burger.classList.remove('open'); }));
+
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// animated counters
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, target = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now(), dur = 2000;
+  const tick = now => {
+    const p = Math.min((now - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * eased).toLocaleString() + suf;
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+  cio.unobserve(el);
+}), { threshold: .6 });
+document.querySelectorAll('.stats .n').forEach(el => cio.observe(el));
+
+// parallax float for legacy frames
+const f1 = document.querySelector('.legacy .f1'), f2 = document.querySelector('.legacy .f2');
+if (f1) window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < 2200) { f1.style.transform = `translateY(${y * -.03}px)`; f2.style.translate = `0 ${y * .025}px`; }
+}, { passive: true });
+
+// form
+document.getElementById('bookform').addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('fnote').classList.add('show');
+  e.target.querySelector('button').textContent = 'Request Received ✓';
+});
+</script>
+</body>
+</html>
