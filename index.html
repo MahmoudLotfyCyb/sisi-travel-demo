@@ -139,6 +139,7 @@ section{position:relative}
 .legacy .frames .badge .lb{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.9)}
 .legacy .story p{color:var(--ink-soft);margin-bottom:1.3rem;font-size:1.05rem}
 .legacy .story p:first-of-type::first-letter{font-family:var(--serif);font-size:3.6em;float:left;line-height:.82;padding-right:.12em;color:var(--coral)}
+html[dir="rtl"] .legacy .story p:first-of-type::first-letter{float:none;font-size:1em;line-height:inherit;padding:0;color:inherit;font-family:var(--arabic)}
 .legacy .values{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.2rem}
 .legacy .values div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem;box-shadow:0 8px 22px rgba(18,51,61,.06);display:flex;flex-direction:column;gap:.15rem;border-top:3px solid var(--turquoise)}
 .legacy .values div:nth-child(2){border-top-color:var(--gold)}
@@ -404,7 +405,7 @@ footer .bottom a:hover{color:var(--gold-bright)}
       <div class="chip">🕘 <span data-en="Open daily until midnight" data-ar="مفتوح يوميًا حتى منتصف الليل">Open daily until midnight</span></div>
     </div>
   </div>
-  <div class="scroll">Scroll</div>
+  <div class="scroll" data-en="Scroll" data-ar="مرر للأسفل">Scroll</div>
 </header>
 
 <!-- marquee -->
@@ -422,15 +423,15 @@ footer .bottom a:hover{color:var(--gold-bright)}
       <div class="frames reveal">
         <div class="f f1"><img src="assets/karnak.jpg" alt="Karnak Temple, Luxor" loading="lazy"></div>
         <div class="f f2"><img src="assets/islamic-cairo.jpg" alt="Historic Cairo" loading="lazy"></div>
-        <div class="badge"><div class="in"><div class="yr">1982</div><div class="lb">Since</div></div></div>
+        <div class="badge"><div class="in"><div class="yr">1982</div><div class="lb" data-en="Since" data-ar="منذ">Since</div></div></div>
       </div>
       <div class="story">
         <div class="sec-head reveal" style="margin-bottom:2.2rem">
           <div class="kicker" data-en="Our Legacy" data-ar="إرثنا">Our Legacy</div>
           <h2 data-en='Four Decades,<br>One <em>Promise</em>' data-ar='أربعة عقود من<br><em>الثقة والوفاء</em>'>Four Decades,<br>One <em>Promise</em></h2>
         </div>
-        <p class="reveal">Sisi Travel Egypt was founded in 1982 with a simple yet ambitious goal — to redefine travel in Egypt by providing world-class services with a personal touch. Over the past four decades, we've proudly served thousands of individual travelers, families, corporate clients, religious groups, and international partners.</p>
-        <p class="reveal">We are more than a travel agency — we are a team of passionate professionals who understand that every journey is a personal story. From the first call to the final farewell, we provide seamless coordination, creative itineraries, and unmatched hospitality.</p>
+        <p class="reveal" data-en="Sisi Travel Egypt was founded in 1982 with a simple yet ambitious goal — to redefine travel in Egypt by providing world-class services with a personal touch. Over the past four decades, we've proudly served thousands of individual travelers, families, corporate clients, religious groups, and international partners." data-ar="تأسست سيسي ترافل مصر عام ١٩٨٢ بهدف طموح — أن نعيد تعريف السفر في مصر بخدمات عالمية ولمسة إنسانية. وعلى مدى أربعة عقود، خدمنا آلاف المسافرين والعائلات وعملاء الشركات والمجموعات الدينية والشركاء الدوليين.">Sisi Travel Egypt was founded in 1982 with a simple yet ambitious goal — to redefine travel in Egypt by providing world-class services with a personal touch. Over the past four decades, we've proudly served thousands of individual travelers, families, corporate clients, religious groups, and international partners.</p>
+        <p class="reveal" data-en="We are more than a travel agency — we are a team of passionate professionals who understand that every journey is a personal story. From the first call to the final farewell, we provide seamless coordination, creative itineraries, and unmatched hospitality." data-ar="نحن أكثر من وكالة سفر — نحن فريق من المحترفين الشغوفين يدرك أن كل رحلة حكاية شخصية. من أول اتصال إلى آخر وداع، نقدم تنسيقًا متقنًا وبرامج مبتكرة وضيافة لا تُضاهى.">We are more than a travel agency — we are a team of passionate professionals who understand that every journey is a personal story. From the first call to the final farewell, we provide seamless coordination, creative itineraries, and unmatched hospitality.</p>
         <div class="values reveal">
           <div><b>Integrity</b><span>Honoring promises with transparency</span></div>
           <div><b>Excellence</b><span>Continuously elevating standards</span></div>
@@ -453,50 +454,50 @@ footer .bottom a:hover{color:var(--gold-bright)}
     <div class="svc-grid">
       <div class="svc reveal">
         <div class="ic">🕋</div>
-        <h3>Hajj &amp; Umrah</h3>
-        <p>Meaningful spiritual journeys to the holy destinations — organized with decades of experience, care, and devotion to every detail of your ibadah.</p>
+        <h3 data-en="Hajj &amp; Umrah" data-ar="الحج والعمرة">Hajj &amp; Umrah</h3>
+        <p data-en="Meaningful spiritual journeys to the holy destinations — organized with decades of experience, care, and devotion to every detail of your ibadah." data-ar="رحلات روحانية إلى الديار المقدسة — منظمة بخبرة عقود وعناية بكل تفاصيل عبادتكم.">Meaningful spiritual journeys to the holy destinations — organized with decades of experience, care, and devotion to every detail of your ibadah.</p>
         <div class="ar">الحج والعمرة</div>
       </div>
       <div class="svc reveal">
         <div class="ic">🌍</div>
-        <h3>Inbound &amp; Outbound Tourism</h3>
-        <p>Meticulously crafted tours inside Egypt and international packages to Europe, Asia, and the Middle East.</p>
+        <h3 data-en="Inbound &amp; Outbound Tourism" data-ar="السياحة الداخلية والخارجية">Inbound &amp; Outbound Tourism</h3>
+        <p data-en="Meticulously crafted tours inside Egypt and international packages to Europe, Asia, and the Middle East." data-ar="برامج سياحية مصممة بإتقان داخل مصر وباقات عالمية إلى أوروبا وآسيا والشرق الأوسط.">Meticulously crafted tours inside Egypt and international packages to Europe, Asia, and the Middle East.</p>
         <div class="ar">السياحة الداخلية والخارجية</div>
       </div>
       <div class="svc reveal">
         <div class="ic">✈️</div>
-        <h3>Aviation Excellence</h3>
-        <p>Access to all major airlines, competitive fares, seamless bookings, and charter services.</p>
+        <h3 data-en="Aviation Excellence" data-ar="الطيران والحجوزات">Aviation Excellence</h3>
+        <p data-en="Access to all major airlines, competitive fares, seamless bookings, and charter services." data-ar="وصول لجميع شركات الطيران الكبرى، أسعار تنافسية، حجوزات سلسة، وخدمات رحلات مستأجرة.">Access to all major airlines, competitive fares, seamless bookings, and charter services.</p>
         <div class="ar">الطيران والحجوزات</div>
       </div>
       <div class="svc reveal">
         <div class="ic">🏨</div>
-        <h3>Hospitality</h3>
-        <p>Exceptional rates and availability at top hotels and resorts worldwide.</p>
+        <h3 data-en="Hospitality" data-ar="الضيافة والفنادق">Hospitality</h3>
+        <p data-en="Exceptional rates and availability at top hotels and resorts worldwide." data-ar="أسعار استثنائية وتوافر ممتاز في أفضل الفنادق والمنتجعات حول العالم.">Exceptional rates and availability at top hotels and resorts worldwide.</p>
         <div class="ar">الضيافة والفنادق</div>
       </div>
       <div class="svc reveal">
         <div class="ic">🧭</div>
-        <h3>Customized Travel Packages</h3>
-        <p>Personalized itineraries based on your interests, needs, and style.</p>
+        <h3 data-en="Customized Travel Packages" data-ar="برامج سفر مخصصة">Customized Travel Packages</h3>
+        <p data-en="Personalized itineraries based on your interests, needs, and style." data-ar="برامج مصممة خصيصًا لكم حسب اهتماماتكم واحتياجاتكم وأسلوبكم.">Personalized itineraries based on your interests, needs, and style.</p>
         <div class="ar">برامج مخصصة</div>
       </div>
       <div class="svc reveal">
         <div class="ic">💼</div>
-        <h3>MICE Tourism</h3>
-        <p>Complete management for meetings, incentives, conferences, and exhibitions.</p>
+        <h3 data-en="MICE Tourism" data-ar="المؤتمرات والمعارض">MICE Tourism</h3>
+        <p data-en="Complete management for meetings, incentives, conferences, and exhibitions." data-ar="إدارة متكاملة لاجتماعات الحوافز والمؤتمرات والمعارض.">Complete management for meetings, incentives, conferences, and exhibitions.</p>
         <div class="ar">المؤتمرات والمعارض</div>
       </div>
       <div class="svc reveal">
         <div class="ic">🚢</div>
-        <h3>Cruise Adventures</h3>
-        <p>Luxury Nile cruises and high-seas journeys combining adventure and culture.</p>
+        <h3 data-en="Cruise Adventures" data-ar="الرحلات البحرية">Cruise Adventures</h3>
+        <p data-en="Luxury Nile cruises and high-seas journeys combining adventure and culture." data-ar="رحلات نيلية فاخرة ورحلات بحرية تجمع بين المغامرة والثقافة.">Luxury Nile cruises and high-seas journeys combining adventure and culture.</p>
         <div class="ar">الرحلات البحرية</div>
       </div>
       <div class="svc reveal">
         <div class="ic">🌅</div>
-        <h3>Captivating Excursions</h3>
-        <p>Day tours and short excursions highlighting Egypt's rich culture and landscapes.</p>
+        <h3 data-en="Captivating Excursions" data-ar="الرحلات اليومية">Captivating Excursions</h3>
+        <p data-en="Day tours and short excursions highlighting Egypt's rich culture and landscapes." data-ar="رحلات يومية قصيرة تبرز ثقافة مصر الغنية ومناظرها الساحرة.">Day tours and short excursions highlighting Egypt's rich culture and landscapes.</p>
         <div class="ar">الرحلات اليومية</div>
       </div>
     </div>
@@ -509,17 +510,17 @@ footer .bottom a:hover{color:var(--gold-bright)}
     <div class="sec-head reveal">
       <div class="kicker" data-en="Where We Take You" data-ar="إلى أين نأخذكم">Where We Take You</div>
       <h2 data-en='From the Nile<br>to the <em>World</em>' data-ar='من النيل<br>إلى <em>العالم</em>'>From the Nile<br>to the <em>World</em></h2>
-      <p class="lead">Egypt's timeless wonders, the Gulf's spirit, Europe's romance, and Asia's shores — curated by people who have walked them.</p>
+      <p class="lead" data-en="Egypt's timeless wonders, the Gulf's spirit, Europe's romance, and Asia's shores — curated by people who have walked them." data-ar="عجائب مصر الخالدة، وروح الخليج، ورومانسية أوروبا، وشواطئ آسيا — ينتقيها من زاروها فعلًا.">Egypt's timeless wonders, the Gulf's spirit, Europe's romance, and Asia's shores — curated by people who have walked them.</p>
     </div>
     <div class="dest-grid">
-      <div class="dcard d1 reveal"><img src="assets/pyramids.jpg" alt="Pyramids of Giza" loading="lazy"><div class="shade"></div><div class="lab"><h3>Giza</h3><p>Egypt — The Last Wonder</p></div></div>
-      <div class="dcard d2 reveal"><img src="assets/kaaba.jpg" alt="Makkah" loading="lazy"><div class="shade"></div><div class="lab"><h3>Makkah &amp; Madinah</h3><p>Saudi Arabia — Hajj &amp; Umrah</p></div></div>
-      <div class="dcard d3 reveal"><img src="assets/paris.jpg" alt="Paris" loading="lazy"><div class="shade"></div><div class="lab"><h3>Paris</h3><p>Europe</p></div></div>
-      <div class="dcard d4 reveal"><img src="assets/riyadh.jpg" alt="Riyadh" loading="lazy"><div class="shade"></div><div class="lab"><h3>Riyadh</h3><p>Gulf Cityscapes</p></div></div>
-      <div class="dcard d5 reveal"><img src="assets/bali.jpg" alt="Southeast Asia" loading="lazy"><div class="shade"></div><div class="lab"><h3>Asian Shores</h3><p>Bali &amp; Beyond</p></div></div>
-      <div class="dcard d6 reveal"><img src="assets/beach.jpg" alt="Red Sea Riviera" loading="lazy"><div class="shade"></div><div class="lab"><h3>Red Sea Riviera</h3><p>Egypt's Turquoise Coast</p></div></div>
-      <div class="dcard d7 reveal"><img src="assets/qaitbay.jpg" alt="Alexandria" loading="lazy"><div class="shade"></div><div class="lab"><h3>Alexandria</h3><p>The Mediterranean Bride</p></div></div>
-      <div class="dcard d8 reveal"><img src="assets/taj-mahal.jpg" alt="Agra" loading="lazy"><div class="shade"></div><div class="lab"><h3>Agra</h3><p>Asia — Wonders of the World</p></div></div>
+      <div class="dcard d1 reveal"><img src="assets/pyramids.jpg" alt="Pyramids of Giza" loading="lazy"><div class="shade"></div><div class="lab"><h3 data-en="Giza" data-ar="الجيزة">Giza</h3><p data-en="Egypt — The Last Wonder" data-ar="مصر — الأعجوبة الأخيرة">Egypt — The Last Wonder</p></div></div>
+      <div class="dcard d2 reveal"><img src="assets/kaaba.jpg" alt="Makkah" loading="lazy"><div class="shade"></div><div class="lab"><h3 data-en="Makkah &amp; Madinah" data-ar="مكة والمدينة">Makkah &amp; Madinah</h3><p data-en="Saudi Arabia — Hajj &amp; Umrah" data-ar="السعودية — حج وعمرة">Saudi Arabia — Hajj &amp; Umrah</p></div></div>
+      <div class="dcard d3 reveal"><img src="assets/paris.jpg" alt="Paris" loading="lazy"><div class="shade"></div><div class="lab"><h3 data-en="Paris" data-ar="باريس">Paris</h3><p data-en="Europe" data-ar="أوروبا">Europe</p></div></div>
+      <div class="dcard d4 reveal"><img src="assets/riyadh.jpg" alt="Riyadh" loading="lazy"><div class="shade"></div><div class="lab"><h3 data-en="Riyadh" data-ar="الرياض">Riyadh</h3><p data-en="Gulf Cityscapes" data-ar="مدن الخليج">Gulf Cityscapes</p></div></div>
+      <div class="dcard d5 reveal"><img src="assets/bali.jpg" alt="Southeast Asia" loading="lazy"><div class="shade"></div><div class="lab"><h3 data-en="Asian Shores" data-ar="شواطئ آسيا">Asian Shores</h3><p data-en="Bali &amp; Beyond" data-ar="بالي وما وراءها">Bali &amp; Beyond</p></div></div>
+      <div class="dcard d6 reveal"><img src="assets/beach.jpg" alt="Red Sea Riviera" loading="lazy"><div class="shade"></div><div class="lab"><h3 data-en="Red Sea Riviera" data-ar="البحر الأحمر">Red Sea Riviera</h3><p data-en="Egypt's Turquoise Coast" data-ar="ساحل مصر الفيروزي">Egypt's Turquoise Coast</p></div></div>
+      <div class="dcard d7 reveal"><img src="assets/qaitbay.jpg" alt="Alexandria" loading="lazy"><div class="shade"></div><div class="lab"><h3 data-en="Alexandria" data-ar="الإسكندرية">Alexandria</h3><p data-en="The Mediterranean Bride" data-ar="عروس المتوسط">The Mediterranean Bride</p></div></div>
+      <div class="dcard d8 reveal"><img src="assets/taj-mahal.jpg" alt="Agra" loading="lazy"><div class="shade"></div><div class="lab"><h3 data-en="Agra" data-ar="أجرا">Agra</h3><p data-en="Asia — Wonders of the World" data-ar="آسيا — عجائب الدنيا">Asia — Wonders of the World</p></div></div>
     </div>
   </div>
 </section>
@@ -554,10 +555,10 @@ footer .bottom a:hover{color:var(--gold-bright)}
       <h2>Postcards From <em>Our Journeys</em></h2>
     </div>
     <div class="gal-track">
-      <div class="g reveal"><img src="assets/family.jpg" alt="Family by the sea" loading="lazy"><div class="cap">Seaside Escapes</div></div>
-      <div class="g reveal"><img src="assets/hero-obelisk.jpg" alt="Karnak obelisk" loading="lazy"><div class="cap">Luxor — Ancient Thebes</div></div>
-      <div class="g reveal"><img src="assets/ramses.jpg" alt="Ramses II" loading="lazy"><div class="cap">Egypt's Living History</div></div>
-      <div class="g reveal"><img src="assets/sphinx.jpg" alt="The Sphinx" loading="lazy"><div class="cap">Guardian of Giza</div></div>
+      <div class="g reveal"><img src="assets/family.jpg" alt="Family by the sea" loading="lazy"><div class="cap" data-en="Seaside Escapes" data-ar="إجازات على الشاطئ">Seaside Escapes</div></div>
+      <div class="g reveal"><img src="assets/hero-obelisk.jpg" alt="Karnak obelisk" loading="lazy"><div class="cap" data-en="Luxor — Ancient Thebes" data-ar="الأقصر — طيبة القديمة">Luxor — Ancient Thebes</div></div>
+      <div class="g reveal"><img src="assets/ramses.jpg" alt="Ramses II" loading="lazy"><div class="cap" data-en="Egypt's Living History" data-ar="تاريخ مصر الحي">Egypt's Living History</div></div>
+      <div class="g reveal"><img src="assets/sphinx.jpg" alt="The Sphinx" loading="lazy"><div class="cap" data-en="Guardian of Giza" data-ar="حارس الجيزة">Guardian of Giza</div></div>
     </div>
   </div>
 </section>
@@ -579,7 +580,7 @@ footer .bottom a:hover{color:var(--gold-bright)}
       <figure class="vcard reveal"><img src="assets/office-entrance.jpg" alt="Sisi Travel entrance at East Hub Mall" loading="lazy"><figcaption>Ground floor · Gate 6</figcaption></figure>
     </div>
     <div class="endorse reveal">
-      <div class="endorse-badge">Madinaty City Hall ✓</div>
+      <div class="endorse-badge" data-en="Madinaty City Hall ✓" data-ar="جهاز مدينتي ✓">Madinaty City Hall ✓</div>
       <p>Featured by <b>Madinaty City Hall</b> — the community's official channel — announcing our opening at East Hub: <em>"A new travel experience is coming with Sisi Travel at East Hub – Madinaty. Discover new destinations and plan your next getaway!"</em></p>
     </div>
   </div>
@@ -596,46 +597,46 @@ footer .bottom a:hover{color:var(--gold-bright)}
     <div class="rev-grid">
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"A great trip isn't just about where you go — it's about the little moments that stay with you after you return. Sisi Travels helps turn the planning into part of the excitement."</blockquote>
-        <figcaption><b>memyslf andi</b><span>Local Guide · Google review</span></figcaption>
+        <blockquote data-en=""A great trip isn't just about where you go — it's about the little moments that stay with you after you return. Sisi Travels helps turn the planning into part of the excitement."" data-ar=""الرحلة العظيمة ليست في المكان فقط — بل في اللحظات الصغيرة التي ترافقك بعد العودة. سيسي ترافل يجعل التخطيط جزءًا من المتعة."">"A great trip isn't just about where you go — it's about the little moments that stay with you after you return. Sisi Travels helps turn the planning into part of the excitement."</blockquote>
+        <figcaption><b>memyslf andi</b><span data-en="Local Guide · Google review" data-ar="مرشد محلي · مراجعة جوجل">Local Guide · Google review</span></figcaption>
       </figure>
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"An excellent experience in every sense of the word, and customer service that deserves more than five stars."</blockquote>
-        <figcaption><b>Mahmoud Elsayed Lotfy</b><span>Local Guide · Google review</span></figcaption>
+        <blockquote data-en=""An excellent experience in every sense of the word, and customer service that deserves more than five stars."" data-ar=""تجربة ممتازة بكل معنى الكلمة، وخدمة عملاء تستحق أكثر من خمس نجوم."">"An excellent experience in every sense of the word, and customer service that deserves more than five stars."</blockquote>
+        <figcaption><b>Mahmoud Elsayed Lotfy</b><span data-en="Local Guide · Google review" data-ar="مرشد محلي · مراجعة جوجل">Local Guide · Google review</span></figcaption>
       </figure>
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"Great experience — professional staff, well managed and organized. Will give you the best service and best prices."</blockquote>
-        <figcaption><b>eslam kamal</b><span>Local Guide · Google review</span></figcaption>
+        <blockquote data-en=""Great experience — professional staff, well managed and organized. Will give you the best service and best prices."" data-ar=""تجربة رائعة — فريق محترف، تنظيم ممتاز، وأفضل خدمة بأفضل الأسعار."">"Great experience — professional staff, well managed and organized. Will give you the best service and best prices."</blockquote>
+        <figcaption><b>eslam kamal</b><span data-en="Local Guide · Google review" data-ar="مرشد محلي · مراجعة جوجل">Local Guide · Google review</span></figcaption>
       </figure>
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"I am very happy to have worked with Professor Najla. She is the epitome of good taste and elegance, wonderful in her interactions, and very knowledgeable in her work."</blockquote>
-        <figcaption><b>Sweety Busy</b><span>Google review</span></figcaption>
+        <blockquote data-en=""I am very happy to have worked with Professor Najla. She is the epitome of good taste and elegance, wonderful in her interactions, and very knowledgeable in her work."" data-ar=""سعيدة جدًا بالتعامل مع الأستاذة نجلاء. شخص راقٍ في تعاملها ومدرك لعملها بشكل كبير. أتمنى لها مزيدًا من التوفيق."">"I am very happy to have worked with Professor Najla. She is the epitome of good taste and elegance, wonderful in her interactions, and very knowledgeable in her work."</blockquote>
+        <figcaption><b>Sweety Busy</b><span data-en="Google review" data-ar="مراجعة جوجل">Google review</span></figcaption>
       </figure>
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"Great travel agency with helpful staff and competitive prices. Will definitely book with them again."</blockquote>
-        <figcaption><b>Amina Sami</b><span>Google review</span></figcaption>
+        <blockquote data-en=""Great travel agency with helpful staff and competitive prices. Will definitely book with them again."" data-ar=""وكالة سفر رائعة بفريق متعاون وأسعار تنافسية. سأحجز معهم بالتأكيد مرة أخرى."">"Great travel agency with helpful staff and competitive prices. Will definitely book with them again."</blockquote>
+        <figcaption><b>Amina Sami</b><span data-en="Google review" data-ar="مراجعة جوجل">Google review</span></figcaption>
       </figure>
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"The best service I've ever experienced in Egypt — and in my city. The people are classy."</blockquote>
-        <figcaption><b>Mohmed Ali</b><span>Google review</span></figcaption>
+        <blockquote data-en=""The best service I've ever experienced in Egypt — and in my city. The people are classy."" data-ar=""أفضل خدمة جربتها في مصر — وفي مدينتي. ناس راقية."">"The best service I've ever experienced in Egypt — and in my city. The people are classy."</blockquote>
+        <figcaption><b>Mohmed Ali</b><span data-en="Google review" data-ar="مراجعة جوجل">Google review</span></figcaption>
       </figure>
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"Very pleasant service, and they are very attentive to customer satisfaction."</blockquote>
-        <figcaption><b>Khaled Alsultan</b><span>Google review</span></figcaption>
+        <blockquote data-en=""Very pleasant service, and they are very attentive to customer satisfaction."" data-ar=""خدمة ممتازة، واهتمام حقيقي برضا العملاء."">"Very pleasant service, and they are very attentive to customer satisfaction."</blockquote>
+        <figcaption><b>Khaled Alsultan</b><span data-en="Google review" data-ar="مراجعة جوجل">Google review</span></figcaption>
       </figure>
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"Excellent service and very kind treatment. May you always be successful!"</blockquote>
-        <figcaption><b>Sami Mohamed</b><span>Google review</span></figcaption>
+        <blockquote data-en=""Excellent service and very kind treatment. May you always be successful!"" data-ar=""خدمة ممتازة وتعامل طيب. أتمنى لكم دوام التوفيق!"">"Excellent service and very kind treatment. May you always be successful!"</blockquote>
+        <figcaption><b>Sami Mohamed</b><span data-en="Google review" data-ar="مراجعة جوجل">Google review</span></figcaption>
       </figure>
     </div>
-    <p class="rev-note reveal">Reviews shown are public Google Maps reviews of SiSi Travel Madinty, East Hub Mall, New Cairo — <a href="https://www.google.com/maps/place/SiSi+Travel+Madinty/@30.0760169,31.6740543,17z/data=!4m6!3m5!1s0x1457f552c365754b:0x3427e14ecd0b2bb7!8m2!3d30.0760169!4d31.6740543!16s%2Fg%2F11zxrkd3gl" target="_blank" rel="noopener">see all 13 on Google Maps ↗</a></p>
+    <p class="rev-note reveal">Reviews shown are public Google Maps reviews of SiSi Travel Madinty, East Hub Mall, New Cairo — <a href="https://www.google.com/maps/place/SiSi+Travel+Madinty/@30.0760169,31.6740543,17z/data=!4m6!3m5!1s0x1457f552c365754b:0x3427e14ecd0b2bb7!8m2!3d30.0760169!4d31.6740543!16s%2Fg%2F11zxrkd3gl" target="_blank" rel="noopener"><span data-en="see all 13 on Google Maps ↗" data-ar="شاهد كل المراجعات على جوجل مابس ↗">see all 13 on Google Maps ↗</span></a></p>
 
     <div class="fb-block reveal">
       <div class="fb-head">
@@ -645,27 +646,27 @@ footer .bottom a:hover{color:var(--gold-bright)}
       </div>
       <div class="rev-grid fb-grid">
         <figure class="rev reveal">
-          <div class="src">Facebook · Madinaty City Hall post</div>
+          <div class="src" data-en="Facebook · Madinaty City Hall post" data-ar="فيسبوك · منشور جهاز مدينتي">Facebook · Madinaty City Hall post</div>
           <blockquote dir="rtl" lang="ar">تجربة ممتازة جدًا مع سيسي ترافل. تعامل راقٍ واهتمام ومتابعة حقيقية من أول لحظة... خدمة عملاء ١٠/١٠ فعلًا وأنصح بالتعامل معاهم جدًا</blockquote>
           <blockquote class="en">"A truly excellent experience with Sisi Travel. Classy treatment, real care and follow-up from the first moment… customer service 10/10 — I highly recommend them."</blockquote>
-          <figcaption><b>Mahmoud Lotfy</b><span>Facebook comment</span></figcaption>
+          <figcaption><b>Mahmoud Lotfy</b><span data-en="Facebook comment" data-ar="تعليق فيسبوك">Facebook comment</span></figcaption>
         </figure>
         <figure class="rev reveal">
-          <div class="src">Facebook · Madinaty City Hall post</div>
+          <div class="src" data-en="Facebook · Madinaty City Hall post" data-ar="فيسبوك · منشور جهاز مدينتي">Facebook · Madinaty City Hall post</div>
           <blockquote dir="rtl" lang="ar">ماشاءالله لاقوة إلا بالله مكان جميل وراقي ومحترم واهتمام عالي جدًا بالعميل من أول لحظة وشغل احترافي على أعلى مستوى</blockquote>
           <blockquote class="en">"What a beautiful, classy, respectful place — such high attention to the client from the first moment, and professional work at the highest level."</blockquote>
-          <figcaption><b>Safy Abdelrahman</b><span>Facebook comment</span></figcaption>
+          <figcaption><b>Safy Abdelrahman</b><span data-en="Facebook comment" data-ar="تعليق فيسبوك">Facebook comment</span></figcaption>
         </figure>
         <figure class="rev reveal">
-          <div class="src">Facebook · Madinaty City Hall post</div>
+          <div class="src" data-en="Facebook · Madinaty City Hall post" data-ar="فيسبوك · منشور جهاز مدينتي">Facebook · Madinaty City Hall post</div>
           <blockquote>Cc Travel is one of the best travel agencies in Madinaty — very nice, kind, trustworthy and helpful people.</blockquote>
-          <figcaption><b>Mohmed Ali</b><span>Facebook comment</span></figcaption>
+          <figcaption><b>Mohmed Ali</b><span data-en="Facebook comment" data-ar="تعليق فيسبوك">Facebook comment</span></figcaption>
         </figure>
         <figure class="rev reveal">
-          <div class="src">Facebook · Madinaty City Hall post</div>
+          <div class="src" data-en="Facebook · Madinaty City Hall post" data-ar="فيسبوك · منشور جهاز مدينتي">Facebook · Madinaty City Hall post</div>
           <blockquote dir="rtl" lang="ar">تعامل راقي، واحترافية عالية ما شاء الله، موفقين</blockquote>
           <blockquote class="en">"Classy treatment and high professionalism, mashallah. Wishing you success."</blockquote>
-          <figcaption><b>Sami El Sheikh</b><span>Facebook comment</span></figcaption>
+          <figcaption><b>Sami El Sheikh</b><span data-en="Facebook comment" data-ar="تعليق فيسبوك">Facebook comment</span></figcaption>
         </figure>
       </div>
     </div>
@@ -678,7 +679,7 @@ footer .bottom a:hover{color:var(--gold-bright)}
     <div class="grid">
       <div class="info reveal">
         <h2 style="color:#fff" data-en='Begin Your <em style="color:var(--gold-bright)">Story</em>' data-ar='ابدأ <em style="color:var(--gold-bright)">حكايتك</em>'>Begin Your <em style="color:var(--gold-bright)">Story</em></h2>
-        <p>Tell us where you dream of going — a travel designer will reach out within 24 hours to shape it with you.</p>
+        <p data-en-placeholder — a travel designer will reach out within 24 hours to shape it with you.</p>
         <div class="c-item">
           <div class="ic">📞</div>
           <div><b data-en="Call / WhatsApp — Madinaty" data-ar="اتصال / واتساب — مدينتي">Call / WhatsApp — Madinaty</b><a class="t1" href="tel:+201090024495">010 9002 4495</a><br><a class="t2" href="tel:+201224662250" style="font-size:.88rem;color:var(--muted)">0122 466 2250</a></div>
@@ -739,9 +740,9 @@ footer .bottom a:hover{color:var(--gold-bright)}
       <div class="fnote" data-en='"Every destination becomes a story worth telling."' data-ar='"كل وجهة تصبح حكاية تستحق أن تُروى."'>"Every destination becomes a story worth telling."</div>
     </div>
     <div class="bottom">
-      <div>© 2026 Sisi Travel Egypt — Est. 1982 · Madinaty Branch</div>
+      <div data-en="© 2026 Sisi Travel Egypt — Est. 1982 · Madinaty Branch" data-ar="© ٢٠٢٦ سيسي ترافل مصر — تأسست ١٩٨٢ · فرع مدينتي">© 2026 Sisi Travel Egypt — Est. 1982 · Madinaty Branch</div>
       <div>East Hub Mall · Ground Floor · Gate 6 — Next to Mazaj</div>
-      <div><a href="#top">Back to Top ↑</a></div>
+      <div><a href="#top" data-en="Back to Top ↑" data-ar="العودة للأعلى ↑">Back to Top ↑</a></div>
     </div>
   </div>
 </footer>
