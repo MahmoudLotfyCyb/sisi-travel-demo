@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Sisi Travel — Since 1982 · سيسي ترافل</title>
 <meta name="description" content="Sisi Travel Egypt — four decades of world-class travel from Egypt to the world. Umrah & Hajj, global destinations, tailored journeys. East Hub, Madinaty · New Cairo.">
 <link rel="icon" type="image/png" href="assets/logo.png">
@@ -53,8 +53,8 @@ a{color:inherit;text-decoration:none}
 @keyframes loadslide{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
 
 /* ---------- navigation ---------- */
-nav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 4rem;transition:all .5s ease;background:rgba(253,248,239,.85);backdrop-filter:blur(16px)}
-nav.scrolled{background:rgba(253,248,239,.92);backdrop-filter:blur(16px);box-shadow:0 8px 30px rgba(18,51,61,.10);padding:.9rem 4rem}
+nav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 4rem;transition:all .5s ease;background:rgba(253,248,239,.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+nav.scrolled{background:rgba(253,248,239,.96);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 8px 30px rgba(18,51,61,.10);padding:.9rem 4rem}
 nav .brand{display:flex;align-items:center;gap:.9rem}
 nav .brand img{height:52px;width:auto}
 nav .brand .t{font-family:var(--serif);font-size:1.25rem;letter-spacing:.28em;color:var(--teal-deep)}
@@ -276,7 +276,7 @@ blockquote[lang="ar"]{font-family:var(--arabic);font-size:1.15rem;line-height:1.
 form{background:#fff;border-radius:var(--r);padding:2.2rem;box-shadow:var(--shadow-lg)}
 form .row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
 .field{position:relative;margin-bottom:1.2rem}
-.field input,.field select,.field textarea{width:100%;background:var(--bg);border:2px solid rgba(14,124,138,.15);color:var(--ink);font-family:var(--sans);font-size:.96rem;padding:.95rem 1rem;outline:none;transition:border .3s;border-radius:12px}
+.field input,.field select,.field textarea{width:100%;background:var(--bg);border:2px solid rgba(14,124,138,.15);color:var(--ink);font-family:var(--sans);font-size:16px;padding:.95rem 1rem;outline:none;transition:border .3s;border-radius:12px}
 .field select{appearance:none;color:var(--muted)}
 .field select option{color:var(--ink)}
 .field textarea{resize:vertical;min-height:110px}
@@ -289,7 +289,7 @@ form .btn{width:100%;margin-top:1rem;cursor:pointer;border:none;font-family:var(
 .form-note.show{display:block}
 
 /* ---------- footer ---------- */
-footer{background:var(--ink);padding:4.5rem 0 2.4rem;color:rgba(255,255,255,.75)}
+footer{background:var(--ink);padding:4.5rem 0 calc(2.4rem + env(safe-area-inset-bottom));color:rgba(255,255,255,.75)}
 footer .top{display:flex;justify-content:space-between;align-items:center;gap:3rem;flex-wrap:wrap;margin-bottom:3rem}
 footer .fbrand{display:flex;align-items:center;gap:1.2rem}
 footer .fbrand img{height:64px}
@@ -298,6 +298,14 @@ footer .fbrand .a{font-family:var(--arabic);color:var(--gold-bright);font-size:.
 footer .fnote{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold-bright)}
 footer .bottom{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);padding-top:1.8rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 footer .bottom a:hover{color:var(--gold-bright)}
+
+html[dir="rtl"] a[href^="tel:"],
+html[dir="rtl"] .legacy .badge .yr,
+html[dir="rtl"] .stats .n,
+html[dir="rtl"] .hero .chip b{
+  direction:ltr;
+  unicode-bidi:isolate;
+}
 
 /* ---------- responsive ---------- */
 @media(max-width:1080px){
@@ -342,6 +350,9 @@ footer .bottom a:hover{color:var(--gold-bright)}
   .hero .actions .btn{padding:.9rem 1.7rem;width:min(100%,320px)}
   form{padding:1.5rem}
   form .row{grid-template-columns:1fr;gap:0}
+  .c-item a{display:inline-block;padding:.45rem 0}
+  .gmap-link,.rev-note a{display:inline-block;padding:.5rem 0}
+  footer .bottom a{display:inline-block;padding:.6rem 0}
   .contact .grid{gap:2.8rem}
   footer .top{justify-content:center;text-align:center}
   footer .bottom{justify-content:center;text-align:center}
