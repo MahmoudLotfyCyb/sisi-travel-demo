@@ -812,9 +812,19 @@ document.getElementById('langbtn').addEventListener('click', () => {
   });
   document.title = rtl ? 'سيسي ترافل مدينتي — منذ ١٩٨٢' : 'Sisi Travel Madinaty — Since 1982';
 });
-// apply saved preference on load
+// apply saved preference on load (direct, no toggle-click)
 (function(){ const s = (()=>{try{return localStorage.getItem('sisi-lang')}catch(e){return null}})();
-  if (s === 'ar') document.getElementById('langbtn').click();
+  if (s === 'ar') {
+    const rtl = true;
+    document.documentElement.lang = 'ar';
+    document.documentElement.dir = 'rtl';
+    document.getElementById('langbtn').textContent = 'EN';
+    LANG = 'ar';
+    document.title = 'سيسي ترافل مدينتي — منذ ١٩٨٢';
+    document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+      el.innerHTML = el.dataset.ar;
+    });
+  }
 })();
 
 </script>
