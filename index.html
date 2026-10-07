@@ -193,6 +193,22 @@ section{position:relative}
 .gal-track .g:hover img{transform:scale(1.08)}
 .gal-track .g .cap{position:absolute;inset:auto 0 0 0;padding:1.4rem;background:linear-gradient(transparent,rgba(8,7,5,.92));font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
 
+/* ---------- visit us ---------- */
+.visit{padding:8rem 0 9rem;background:var(--black)}
+.visit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.vcard{position:relative;overflow:hidden;border:1px solid var(--line);height:300px;margin:0}
+.vcard:nth-child(2){height:340px;margin-top:2rem}
+.vcard:nth-child(5){height:340px;margin-top:2rem}
+.vcard img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s cubic-bezier(.2,.8,.2,1);filter:saturate(.95)}
+.vcard:hover img{transform:scale(1.06)}
+.vcard figcaption{position:absolute;inset:auto 0 0 0;padding:1.1rem 1.4rem;background:linear-gradient(transparent,rgba(8,7,5,.92));font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.endorse{margin-top:3rem;border:1px solid rgba(212,175,140,.35);background:linear-gradient(160deg,#1d1810,var(--ink));padding:2.2rem 2.6rem;display:flex;gap:2rem;align-items:center}
+.endorse-badge{flex:none;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.7rem 1.3rem;white-space:nowrap}
+.endorse p{color:rgba(245,239,228,.82);font-size:.98rem;line-height:1.6}
+.endorse p b{color:var(--gold-bright);font-weight:500}
+@media(max-width:1080px){.visit-grid{grid-template-columns:repeat(2,1fr)}.vcard:nth-child(2),.vcard:nth-child(5){margin-top:0}}
+@media(max-width:760px){.visit-grid{grid-template-columns:1fr}.vcard{height:260px!important;margin-top:0!important}.endorse{flex-direction:column;align-items:flex-start;gap:1.2rem}}
+
 /* ---------- reviews ---------- */
 .reviews{padding:8rem 0 9rem;background:linear-gradient(var(--ink),var(--black) 70%)}
 .rev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
@@ -206,6 +222,17 @@ section{position:relative}
 .rev-note{text-align:center;margin-top:3.2rem;font-size:.82rem;color:var(--muted)}
 .rev-note a{color:var(--gold);border-bottom:1px solid rgba(212,175,140,.35);transition:color .3s}
 .rev-note a:hover{color:var(--gold-bright)}
+.fb-block{margin-top:5rem;border-top:1px solid var(--line);padding-top:4rem}
+.fb-head .kicker{margin-bottom:1.2rem}
+.fb-head h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3vw,2.5rem)}
+.fb-head h3 em{font-style:italic;color:var(--gold-bright)}
+.fb-sub{color:var(--muted);margin-top:.7rem;font-size:.95rem}
+.fb-grid{margin-top:2.6rem;grid-template-columns:repeat(4,1fr)}
+.rev .src{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:-.5rem}
+blockquote.en{font-family:var(--sans);font-style:normal;font-size:.86rem;color:var(--muted);line-height:1.55;border-left:1px solid var(--line);padding-left:.9rem;margin-top:-.4rem}
+blockquote[lang="ar"]{font-family:var(--arabic);font-size:1.15rem;line-height:1.9}
+@media(max-width:1080px){.fb-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.fb-grid{grid-template-columns:1fr}}
 @media(max-width:1080px){.rev-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.rev-grid{grid-template-columns:1fr}}
 
@@ -302,8 +329,7 @@ footer .bottom a:hover{color:var(--gold)}
   <ul>
     <li><a href="#legacy">Our Story</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#destinations">Destinations</a></li>
-    <li><a href="#umrah">Hajj &amp; Umrah</a></li>
+    <li><a href="#visit">Visit Us</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -316,10 +342,10 @@ footer .bottom a:hover{color:var(--gold)}
   <div class="bg"></div>
   <div class="veil"></div>
   <div class="content">
-    <div class="eyebrow">Est. 1982 · Egypt</div>
+    <div class="eyebrow">Est. 1982 · Now in Madinaty</div>
     <h1>Every Journey<br>a <em>Story</em> Worth Telling</h1>
     <div class="ar">سيسي ترافل — رفاق رحلتكم منذ ١٩٨٢</div>
-    <p class="sub">For over four decades, Sisi Travel has crafted seamless journeys from Egypt to the world — pilgrimages, escapes, and expeditions — with a personal touch that only a family legacy can give.</p>
+    <p class="sub">The 40-year legacy of Sisi Travel, now at East Hub Mall, Madinaty. Pilgrimages, escapes, and expeditions — planned with a personal touch, by people your neighbors already trust.</p>
     <div class="actions">
       <a class="btn gold" href="#destinations">Explore Destinations</a>
       <a class="btn ghost" href="#services">Our Services</a>
@@ -460,10 +486,10 @@ footer .bottom a:hover{color:var(--gold)}
 <!-- stats -->
 <section class="stats">
   <div class="row">
-    <div class="cell reveal"><div class="n" data-count="40">0</div><div class="l">Years of Experience</div></div>
-    <div class="cell reveal"><div class="n" data-count="1000" data-suffix="+">0</div><div class="l">Happy Travelers</div></div>
-    <div class="cell reveal"><div class="n" data-count="50" data-suffix="+">0</div><div class="l">Destinations</div></div>
-    <div class="cell reveal"><div class="n" data-count="25" data-suffix="+">0</div><div class="l">Awards Won</div></div>
+    <div class="cell reveal"><div class="n" data-count="40" data-suffix="+">0</div><div class="l">Years of the Sisi Travel Legacy</div></div>
+    <div class="cell reveal"><div class="n" data-count="13">0</div><div class="l">Google Reviews — All Five Stars</div></div>
+    <div class="cell reveal"><div class="n">5.0</div><div class="l">Google Maps Rating at Madinaty</div></div>
+    <div class="cell reveal"><div class="n" data-count="6">0</div><div class="l">Branches Across Egypt</div></div>
   </div>
 </section>
 
@@ -479,6 +505,29 @@ footer .bottom a:hover{color:var(--gold)}
       <div class="g reveal"><img src="assets/hero-obelisk.jpg" alt="Karnak obelisk" loading="lazy"><div class="cap">Luxor — Ancient Thebes</div></div>
       <div class="g reveal"><img src="assets/ramses.jpg" alt="Ramses II" loading="lazy"><div class="cap">Egypt's Living History</div></div>
       <div class="g reveal"><img src="assets/sphinx.jpg" alt="The Sphinx" loading="lazy"><div class="cap">Guardian of Giza</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- visit us -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Visit Us in Madinaty</div>
+      <h2>Step Inside<br>Our <em>Office</em></h2>
+      <p class="lead">You'll find us at East Hub Mall — ground floor, Gate 6, next to Mazaj. Walk in, meet the team, and plan your trip face to face over a coffee.</p>
+    </div>
+    <div class="visit-grid">
+      <figure class="vcard reveal"><img src="assets/office-storefront.jpg" alt="Sisi Travel storefront at East Hub Mall, Madinaty" loading="lazy"><figcaption>The storefront — East Hub Mall</figcaption></figure>
+      <figure class="vcard reveal"><img src="assets/office-lounge.jpg" alt="Sisi Travel office lounge with world map" loading="lazy"><figcaption>The waiting lounge</figcaption></figure>
+      <figure class="vcard reveal"><img src="assets/office-team.jpg" alt="Sisi Travel team helping a customer" loading="lazy"><figcaption>Always at your service</figcaption></figure>
+      <figure class="vcard reveal"><img src="assets/office-consult.jpg" alt="Travel consultation at Sisi Travel Madinaty" loading="lazy"><figcaption>Face-to-face trip planning</figcaption></figure>
+      <figure class="vcard reveal"><img src="assets/office-interior.jpg" alt="Sisi Travel office entrance interior" loading="lazy"><figcaption>Welcome inside</figcaption></figure>
+      <figure class="vcard reveal"><img src="assets/office-entrance.jpg" alt="Sisi Travel entrance at East Hub Mall" loading="lazy"><figcaption>Ground floor · Gate 6</figcaption></figure>
+    </div>
+    <div class="endorse reveal">
+      <div class="endorse-badge">Madinaty City Hall ✓</div>
+      <p>Featured by <b>Madinaty City Hall</b> — the community's official channel — announcing our opening at East Hub: <em>"A new travel experience is coming with Sisi Travel at East Hub – Madinaty. Discover new destinations and plan your next getaway!"</em></p>
     </div>
   </div>
 </section>
@@ -534,6 +583,39 @@ footer .bottom a:hover{color:var(--gold)}
       </figure>
     </div>
     <p class="rev-note reveal">Reviews shown are public Google Maps reviews of SiSi Travel Madinty, East Hub Mall, New Cairo — <a href="https://www.google.com/maps/place/SiSi+Travel+Madinty/@30.0760169,31.6740543,17z/data=!4m6!3m5!1s0x1457f552c365754b:0x3427e14ecd0b2bb7!8m2!3d30.0760169!4d31.6740543!16s%2Fg%2F11zxrkd3gl" target="_blank" rel="noopener">see all 13 on Google Maps ↗</a></p>
+
+    <div class="fb-block reveal">
+      <div class="fb-head">
+        <div class="kicker">From the Community</div>
+        <h3>What Madinaty Says on <em>Facebook</em></h3>
+        <p class="fb-sub">Neighbors commenting under our opening announcement on Madinaty City Hall — the community's official page.</p>
+      </div>
+      <div class="rev-grid fb-grid">
+        <figure class="rev reveal">
+          <div class="src">Facebook · Madinaty City Hall post</div>
+          <blockquote dir="rtl" lang="ar">تجربة ممتازة جدًا مع سيسي ترافل. تعامل راقٍ واهتمام ومتابعة حقيقية من أول لحظة... خدمة عملاء ١٠/١٠ فعلًا وأنصح بالتعامل معاهم جدًا</blockquote>
+          <blockquote class="en">"A truly excellent experience with Sisi Travel. Classy treatment, real care and follow-up from the first moment… customer service 10/10 — I highly recommend them."</blockquote>
+          <figcaption><b>Mahmoud Lotfy</b><span>Facebook comment</span></figcaption>
+        </figure>
+        <figure class="rev reveal">
+          <div class="src">Facebook · Madinaty City Hall post</div>
+          <blockquote dir="rtl" lang="ar">ماشاءالله لاقوة إلا بالله مكان جميل وراقي ومحترم واهتمام عالي جدًا بالعميل من أول لحظة وشغل احترافي على أعلى مستوى</blockquote>
+          <blockquote class="en">"What a beautiful, classy, respectful place — such high attention to the client from the first moment, and professional work at the highest level."</blockquote>
+          <figcaption><b>Safy Abdelrahman</b><span>Facebook comment</span></figcaption>
+        </figure>
+        <figure class="rev reveal">
+          <div class="src">Facebook · Madinaty City Hall post</div>
+          <blockquote>Cc Travel is one of the best travel agencies in Madinaty — very nice, kind, trustworthy and helpful people.</blockquote>
+          <figcaption><b>Mohmed Ali</b><span>Facebook comment</span></figcaption>
+        </figure>
+        <figure class="rev reveal">
+          <div class="src">Facebook · Madinaty City Hall post</div>
+          <blockquote dir="rtl" lang="ar">تعامل راقي، واحترافية عالية ما شاء الله، موفقين</blockquote>
+          <blockquote class="en">"Classy treatment and high professionalism, mashallah. Wishing you success."</blockquote>
+          <figcaption><b>Sami El Sheikh</b><span>Facebook comment</span></figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -546,23 +628,18 @@ footer .bottom a:hover{color:var(--gold)}
         <p>Tell us where you dream of going — a travel designer will reach out within 24 hours to shape it with you.</p>
         <div class="c-item">
           <div class="ic">✆</div>
-          <div><b>Call / WhatsApp — Madinaty</b><a href="tel:+201090024495">010 9002 4495</a><br><a href="tel:+20237605570" style="font-size:.88rem;color:var(--muted)">+20 2 3760 5570 (HQ)</a></div>
+          <div><b>Call / WhatsApp — Madinaty</b><a href="tel:+201090024495">010 9002 4495</a><br><a href="tel:+201224662250" style="font-size:.88rem;color:var(--muted)">0122 466 2250</a></div>
         </div>
         <div class="c-item">
-          <div class="ic">✉</div>
-          <div><b>Email</b><a href="mailto:info@sisi-travel.com">info@sisi-travel.com</a></div>
+          <div class="ic">⌚</div>
+          <div><b>Hours</b><p>Daily — open until 12 midnight</p></div>
         </div>
         <div class="c-item">
           <div class="ic">⌖</div>
           <div><b>Find Us</b>
-            <ul class="branches">
-              <li>East Hub Mall — Madinaty, New Cairo</li>
-              <li>161 Sudan Street — Mohandessin, Giza (HQ)</li>
-              <li>Diar Nima Mall — Hussein Salem Street</li>
-              <li>Bella Sol Resort — El Mamsha, Hurghada</li>
-              <li>Miami — Alexandria</li>
-              <li>Banha — Qalyubia</li>
-            </ul>
+            <p><b style="color:var(--gold-bright);font-weight:500;display:block;margin-bottom:.3rem">Sisi Travel — Madinaty Branch</b>
+            East Hub Mall, Ground Floor, Gate 6<br>Next to Mazaj — Madinaty, New Cairo</p>
+            <a href="https://www.google.com/maps/place/SiSi+Travel+Madinty/@30.0760169,31.6740543,17z/data=!4m6!3m5!1s0x1457f552c365754b:0x3427e14ecd0b2bb7!8m2!3d30.0760169!4d31.6740543!16s%2Fg%2F11zxrkd3gl" target="_blank" rel="noopener" style="display:inline-block;margin-top:.6rem;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(212,175,140,.35)">Open in Google Maps ↗</a>
           </div>
         </div>
       </div>
@@ -609,8 +686,8 @@ footer .bottom a:hover{color:var(--gold)}
       <div class="fnote">"Every destination becomes a story worth telling."</div>
     </div>
     <div class="bottom">
-      <div>© 2026 Sisi Travel Egypt — Est. 1982</div>
-      <div>Hajj &amp; Umrah · Tourism · Aviation · Hospitality</div>
+      <div>© 2026 Sisi Travel Egypt — Est. 1982 · Madinaty Branch</div>
+      <div>East Hub Mall · Ground Floor · Gate 6 — Next to Mazaj</div>
       <div><a href="#top">Back to Top ↑</a></div>
     </div>
   </div>
