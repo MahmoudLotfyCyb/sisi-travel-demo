@@ -212,6 +212,25 @@ html[dir="rtl"] .legacy .story p:first-of-type::first-letter{float:none;font-siz
 .gal-track .g:hover img{transform:scale(1.08)}
 .gal-track .g .cap{position:absolute;inset:auto 0 0 0;padding:1.4rem;background:linear-gradient(transparent,rgba(10,42,48,.9));font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:#ffd98a}
 
+
+/* ---------- meet naglaa ---------- */
+.meet{padding:7.5rem 0;background:linear-gradient(180deg,var(--bg),var(--sand))}
+.meet-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:4.5rem;align-items:center}
+.meet-photo{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-lg);border:5px solid #fff;margin:0}
+.meet-photo img{width:100%;height:520px;object-fit:cover;transition:transform 1.3s ease}
+.meet-photo:hover img{transform:scale(1.05)}
+.meet-tag{position:absolute;inset-inline:0;bottom:0;padding:1.2rem 1.5rem;background:linear-gradient(transparent,rgba(10,42,48,.92));color:#ffd98a;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+html[dir="rtl"] .meet-tag{font-family:var(--arabic);letter-spacing:0;font-size:.95rem}
+.meet-story p{color:var(--ink-soft);margin-bottom:1.2rem;font-size:1.04rem}
+html[dir="rtl"] .meet-story p{font-family:var(--arabic);font-size:1.08rem}
+.meet-quotes{display:grid;gap:1rem;margin-top:1.8rem}
+.mq{background:#fff;border-inline-start:4px solid var(--gold);border-radius:12px;padding:1rem 1.3rem;font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--ink);box-shadow:0 8px 22px rgba(18,51,61,.06)}
+html[dir="rtl"] .mq{font-family:var(--arabic);font-style:normal;font-weight:500}
+.mq span{display:block;margin-top:.4rem;font-family:var(--sans);font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+html[dir="rtl"] .mq span{font-family:var(--arabic);letter-spacing:0}
+@media(max-width:1100px){.meet-grid{grid-template-columns:1fr;gap:2.5rem}.meet-photo img{height:380px}}
+@media(max-width:760px){.meet{padding:4.5rem 0}.meet-photo img{height:300px}}
+
 /* ---------- visit us ---------- */
 .visit{padding:8rem 0 9rem;background:linear-gradient(180deg,var(--sand),var(--bg))}
 .visit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
@@ -386,13 +405,14 @@ html[dir="rtl"] .hero .chip b{
   <ul>
     <li><a href="#legacy" data-en="Our Story" data-ar="قصتنا">Our Story</a></li>
     <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+    <li><a href="#naglaa" data-en="Meet Naglaa" data-ar="تعرّف على نجلاء">Meet Naglaa</a></li>
     <li><a href="#visit" data-en="Visit Us" data-ar="زورونا">Visit Us</a></li>
     <li><a href="#reviews" data-en="Reviews" data-ar="آراء العملاء">Reviews</a></li>
     <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:.9rem">
     <button class="lang" id="langbtn" aria-label="Switch language">عربي</button>
-    <a class="cta" href="#contact" data-en="Plan Your Journey" data-ar="خطّط رحلتك">Plan Your Journey</a>
+    <a class="cta" href="#contact" data-en="Talk to Naglaa" data-ar="تواصل مع نجلاء">Talk to Naglaa</a>
   </div>
   <div class="burger" id="burger"><span></span><span></span><span></span></div>
 </nav>
@@ -403,9 +423,9 @@ html[dir="rtl"] .hero .chip b{
   <div class="veil"></div>
   <div class="content">
     <div class="pill">✦ <span data-en="Est. 1982 · Now at East Hub, Madinaty" data-ar="منذ ١٩٨٢ · الآن في إيست هب، مدينتي">Est. 1982 · Now at East Hub, Madinaty</span> · <b>5.0 ★</b></div>
-    <h1 data-en='Every Journey<br>a <em>Story</em> Worth Telling' data-ar='كل رحلة<br><em>حكاية تستحق أن تُروى</em>'>Every Journey<br>a <em>Story</em> Worth Telling</h1>
+    <h1 data-en='Meet Naglaa,<br>Your <em>Travel Designer</em> in Madinaty' data-ar='تعرّفوا على <br>الأستاذة نجلاء <em>مصمّمة رحلاتكم</em> في مدينتي'>Meet Naglaa,<br>Your <em>Travel Designer</em> in Madinaty</h1>
     <div class="ar">سيسي ترافل · رفاق رحلتكم منذ ١٩٨٢</div>
-    <p class="sub" data-en="The 40-year legacy of Sisi Travel, now at East Hub Mall, Madinaty. Pilgrimages, escapes, and expeditions, planned with a personal touch by people your neighbors already trust." data-ar="إرث سيسي ترافل الممتد لأكثر من ٤٠ عامًا، الآن في إيست هب مول بمدينتي. حج وعمرة، رحلات ومغامرات، نخططها بعناية شخصية بأيدٍ يثق بها جيرانكم بالفعل.">The 40-year legacy of Sisi Travel, now at East Hub Mall, Madinaty. Pilgrimages, escapes, and expeditions, planned with a personal touch by people your neighbors already trust.</p>
+    <p class="sub" data-en="Naglaa manages Sisi Travel Madinaty at East Hub Mall, carrying a 40-year family legacy. Every trip is planned personally, from the first call to the flight home." data-ar="تدير نجلاء فرع سيسي ترافل مدينتي في إيست هب مول، ممتدةً بإرث عائلي عمره ٤٠ عامًا. كل رحلة تُخطط شخصيًا، من أول اتصال حتى رحلة العودة.">Naglaa manages Sisi Travel Madinaty at East Hub Mall, carrying a 40-year family legacy. Every trip is planned personally, from the first call to the flight home.</p>
     <div class="actions">
       <a class="btn primary" href="#destinations" data-en="Explore Destinations" data-ar="اكتشف الوجهات">Explore Destinations</a>
       <a class="btn light" href="#visit" data-en="Visit Our Office" data-ar="زوروا مكتبنا">Visit Our Office</a>
@@ -574,6 +594,31 @@ html[dir="rtl"] .hero .chip b{
   </div>
 </section>
 
+
+<!-- meet naglaa -->
+<section class="meet" id="naglaa">
+  <div class="wrap">
+    <div class="meet-grid">
+      <div class="meet-photo reveal">
+        <img src="assets/office-consult.jpg" alt="Naglaa planning a trip with clients at Sisi Travel Madinaty" loading="lazy">
+        <div class="meet-tag" data-en="Naglaa · Branch Manager" data-ar="الأستاذة نجلاء · مديرة الفرع">Naglaa · Branch Manager</div>
+      </div>
+      <div class="meet-story">
+        <div class="sec-head reveal" style="margin-bottom:1.8rem">
+          <div class="kicker" data-en="The Person Behind the Desk" data-ar="الشخص الذي خلف المكتب">The Person Behind the Desk</div>
+          <h2 data-en='Trips Planned by <em>Naglaa</em>, Not a Call Center' data-ar='رحلات تخططها <em>نجلاء</em>، لا مركز اتصال'>Trips Planned by <em>Naglaa</em>, Not a Call Center</h2>
+        </div>
+        <p class="reveal" data-en="Walk into the East Hub office and the person who answers your questions is the same person who builds your itinerary, chases your visa paperwork, and checks in on you before the flight. That is how Naglaa works, and it is why reviewers keep naming her by name." data-ar="ادخلوا مكتب إيست هب وستجدون أن من يجيب على أسئلتكم هو من يبني برامج رحلاتكم ويتابع أوراق التأشيرة ويسأل عنكم قبل الرحلة. هكذا تعمل الأستاذة نجلاء، ولهذا يذكرها العملاء بالاسم في تقييماتهم.">Walk into the East Hub office and the person who answers your questions is the same person who builds your itinerary, chases your visa paperwork, and checks in on you before the flight. That is how Naglaa works, and it is why reviewers keep naming her by name.</p>
+        <p class="reveal" data-en="Sisi Travel has been family-run since 1982. Naglaa runs the Madinaty branch the same way: no ticket queues, no scripted answers, no handing you off. You get one contact who owns your trip from start to finish." data-ar="سيسي ترافل عمل عائلي منذ ١٩٨٢. وتدير الأستاذة نجلاء فرع مدينتي بالأسلوب نفسه: بلا طوابير تذاكر، بلا ردود محفوظة، بلا تحويلكم لغيرها. جهة اتصال واحدة تملك رحلتكم من البداية للنهاية.">Sisi Travel has been family-run since 1982. Naglaa runs the Madinaty branch the same way: no ticket queues, no scripted answers, no handing you off. You get one contact who owns your trip from start to finish.</p>
+        <div class="meet-quotes reveal">
+          <div class="mq" dir="rtl" lang="ar">"وأخص بالشكر أ. نجلاء على دعمها ومتابعتها المستمرة" <span>ماحمود، فيسبوك</span></div>
+          <div class="mq" data-en='"Professor Naglaa is wonderful in her interactions and very knowledgeable in her work."' data-ar='"الأستاذة نجلاء رائعة في تعاملها ومدركة لعملها بشكل كبير."'>"Professor Naglaa is wonderful in her interactions and very knowledgeable in her work." <span>Sweety Busy, Google</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- visit us -->
 <section class="visit" id="visit">
   <div class="wrap">
@@ -608,6 +653,11 @@ html[dir="rtl"] .hero .chip b{
     <div class="rev-grid">
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
+        <blockquote data-en=""I am very happy to have worked with Professor Najla. She is the epitome of good taste and elegance, wonderful in her interactions, and very knowledgeable in her work."" data-ar=""سعيدة جدًا بالتعامل مع الأستاذة نجلاء. شخص راقٍ في تعاملها ومدرك لعملها بشكل كبير. أتمنى لها مزيدًا من التوفيق."">"I am very happy to have worked with Professor Najla. She is the epitome of good taste and elegance, wonderful in her interactions, and very knowledgeable in her work."</blockquote>
+        <figcaption><b>Sweety Busy</b><span data-en="Google review" data-ar="مراجعة جوجل">Google review</span></figcaption>
+      </figure>
+      <figure class="rev reveal">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
         <blockquote data-en=""A great trip isn't just about where you go. It's about the little moments that stay with you after you return. Sisi Travels helps turn the planning into part of the excitement."" data-ar=""الرحلة العظيمة ليست في المكان فقط، بل في اللحظات الصغيرة التي ترافقك بعد العودة. سيسي ترافل يجعل التخطيط جزءًا من المتعة."">"A great trip isn't just about where you go. It's about the little moments that stay with you after you return. Sisi Travels helps turn the planning into part of the excitement."</blockquote>
         <figcaption><b>memyslf andi</b><span data-en="Local Guide · Google review" data-ar="مرشد محلي · مراجعة جوجل">Local Guide · Google review</span></figcaption>
       </figure>
@@ -621,11 +671,7 @@ html[dir="rtl"] .hero .chip b{
         <blockquote data-en=""Great experience: professional staff, well managed and organized. Will give you the best service and best prices."" data-ar=""تجربة رائعة: فريق محترف، تنظيم ممتاز، وأفضل خدمة بأفضل الأسعار."">"Great experience: professional staff, well managed and organized. Will give you the best service and best prices."</blockquote>
         <figcaption><b>eslam kamal</b><span data-en="Local Guide · Google review" data-ar="مرشد محلي · مراجعة جوجل">Local Guide · Google review</span></figcaption>
       </figure>
-      <figure class="rev reveal">
-        <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote data-en=""I am very happy to have worked with Professor Najla. She is the epitome of good taste and elegance, wonderful in her interactions, and very knowledgeable in her work."" data-ar=""سعيدة جدًا بالتعامل مع الأستاذة نجلاء. شخص راقٍ في تعاملها ومدرك لعملها بشكل كبير. أتمنى لها مزيدًا من التوفيق."">"I am very happy to have worked with Professor Najla. She is the epitome of good taste and elegance, wonderful in her interactions, and very knowledgeable in her work."</blockquote>
-        <figcaption><b>Sweety Busy</b><span data-en="Google review" data-ar="مراجعة جوجل">Google review</span></figcaption>
-      </figure>
+      
       <figure class="rev reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
         <blockquote data-en=""Great travel agency with helpful staff and competitive prices. Will definitely book with them again."" data-ar=""وكالة سفر رائعة بفريق متعاون وأسعار تنافسية. سأحجز معهم بالتأكيد مرة أخرى."">"Great travel agency with helpful staff and competitive prices. Will definitely book with them again."</blockquote>
@@ -689,11 +735,11 @@ html[dir="rtl"] .hero .chip b{
   <div class="wrap">
     <div class="grid">
       <div class="info reveal">
-        <h2 style="color:#fff" data-en='Begin Your <em style="color:var(--gold-bright)">Story</em>' data-ar='ابدأ <em style="color:var(--gold-bright)">حكايتك</em>'>Begin Your <em style="color:var(--gold-bright)">Story</em></h2>
-        <p data-en="Tell us where you dream of going. A travel designer will reach out within 24 hours to shape it with you." data-ar="أخبرنا إلى أين تحلم بالسفر. سيتواصل معك مستشار سفر خلال ٢٤ ساعة لنخططها معك.">Tell us where you dream of going. A travel designer will reach out within 24 hours to shape it with you.</p>
+        <h2 style="color:#fff" data-en='Plan Your Trip <em style="color:var(--gold-bright)">With Naglaa</em>' data-ar='خطط رحلتك <em style="color:var(--gold-bright)">مع الأستاذة نجلاء</em>'>Plan Your Trip <em style="color:var(--gold-bright)">With Naglaa</em></h2>
+        <p data-en="Message Naglaa about your trip. She replies personally, usually within a few hours." data-ar="راسلو الأستاذة نجلاء عن رحلتكم. ترد بنفسها، وعادةً خلال ساعات.">Message Naglaa about your trip. She replies personally, usually within a few hours.</p>
         <div class="c-item">
           <div class="ic">📞</div>
-          <div><b data-en="Call or WhatsApp, Madinaty branch" data-ar="اتصال أو واتساب، فرع مدينتي">Call or WhatsApp, Madinaty branch</b><a class="t1" href="tel:+201090024495">010 9002 4495</a><br><a class="t2" href="tel:+201224662250" style="font-size:.88rem;color:var(--muted)">0122 466 2250</a></div>
+          <div><b data-en="Call or WhatsApp Naglaa directly" data-ar="اتصل أو راسل الأستاذة نجلاء مباشرة">Call or WhatsApp Naglaa directly</b><a class="t1" href="tel:+201090024495">010 9002 4495</a><br><a class="t2" href="tel:+201224662250" style="font-size:.88rem;color:var(--muted)">0122 466 2250</a></div>
         </div>
         <div class="c-item">
           <div class="ic">🕘</div>
